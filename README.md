@@ -14,3 +14,24 @@ The React Compiler is not enabled on this template because of its impact on dev 
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+---
+
+## Contact form (serverless Gmail)
+
+This project includes a serverless endpoint to forward contact form submissions directly to your Gmail via Nodemailer. To enable it:
+
+1. Enable 2FA on your Google account and create an **App Password** for Mail: https://myaccount.google.com/security → App passwords.
+2. Add the following environment variables to your deployment (Vercel, Netlify, etc.):
+
+   - `GMAIL_USER=seanjameslacaba@gmail.com`
+   - `GMAIL_PASS=<your_app_password>`
+   - `VITE_USE_SERVERLESS=true`
+   - (Optional) `VITE_API_CONTACT_URL=/api/contact`
+
+3. Deploy the site (on Vercel, the serverless function lives at `/api/contact`).
+
+Local dev: keep `VITE_USE_SERVERLESS=false` (default) and test using Formspree or the mailto fallback.
+
+Security: Do NOT commit your real app password to source control—use your hosting provider's secret/env settings.
+
