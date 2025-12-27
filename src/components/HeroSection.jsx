@@ -21,7 +21,7 @@ export const HeroSection = () => {
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">
-            I am an aspiring Full Stack Developer and an IT student at Cebu Institute of Technology.
+            I am an aspiring Full Stack Developer and an IT student at Cebu Institute of Technology - University.
             Throughout my years of study and continuous learning, 
             I have developed multiple projects that demonstrate my skills in building functional and user-focused applications.
           </p>

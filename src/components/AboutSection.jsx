@@ -16,7 +16,7 @@ export const AboutSection = () => {
             </h3>
 
             <p className="text-muted-foreground">
-              I am a 4th-year BSIT student at Cebu Institute of Technology, with hands-on experience in web development gained through academic projects and continuous self-learning.
+              I am a 4th-year BSIT student at Cebu Institute of Technology - University, with hands-on experience in web development gained through academic projects and continuous self-learning.
               I focus on building responsive, accessible, and efficient web applications using modern technologies.
             </p>
 
