@@ -7,6 +7,8 @@ import {
   Send,
   Twitch,
   Twitter,
+  Facebook,
+  Github,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useToast } from "@/hooks/use-toast";
@@ -93,17 +95,11 @@ export const ContactSection = () => {
             <div className="pt-8">
               <h4 className="font-medium mb-4"> Connect With Me</h4>
               <div className="flex space-x-4 justify-center">
-                <a href="#" target="_blank">
+                <a href="https://www.linkedin.com/in/seanjames-lacaba-01aa6337b/" target="_blank">
                   <Linkedin />
                 </a>
-                <a href="#" target="_blank">
-                  <Twitter />
-                </a>
-                <a href="#" target="_blank">
-                  <Instagram />
-                </a>
-                <a href="#" target="_blank">
-                  <Twitch />
+                <a href="https://www.facebook.com/seanlacaba.69/" target="_blank">
+                  <Facebook />
                 </a>
               </div>
             </div>
@@ -114,6 +110,9 @@ export const ContactSection = () => {
             onSubmit={handleSubmit}
           >
             <h3 className="text-2xl font-semibold mb-6"> Send a Message</h3>
+            <p className="text-sm text-muted-foreground mb-4">
+              Contact form is currently under development. You may reach me via email.
+            </p>
 
             <form className="space-y-6">
               <div>
