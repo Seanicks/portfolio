@@ -11,7 +11,7 @@ export const HeroSection = () => {
           {/* Profile image on the left */}
           <div className="flex-shrink-0 mt-4 md:mt-0 mx-auto md:mx-0">
             <img
-              src="/seanjames.jpg"
+              src="/sean.png"
               alt="Seanjames Lacaba"
               className="w-20 h-20 sm:w-28 sm:h-28 md:w-48 md:h-48 lg:w-72 lg:h-72 rounded-full object-cover shadow-lg ring-2 ring-primary/30"
             />
