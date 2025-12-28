@@ -3,32 +3,32 @@ import { ArrowRight, ExternalLink, Github } from "lucide-react";
 const projects = [
   {
     id: 1,
-    title: "SaaS Landing Page",
-    description: "A beautiful landing page app using React and Tailwind.",
-    image: "/projects/project1.png",
-    tags: ["React", "TailwindCSS", "Supabase"],
-    demoUrl: "#",
-    githubUrl: "#",
+    title: "Spedermath",
+    description: "SpederMath is a teacher-assisted, web-based mathematics learning application designed for children with autism, particularly low-functioning learners. The system focuses on early numeracy skills such as number recognition and counting through structured lessons, gamified activities, visual cues, and audio prompts.",
+    image: "/projects/Spedermath.png",
+    tags: ["React", "TailwindCSS", "Spring Boot"],
+    demoUrl: "https://spedermath.app/",
+    githubUrl: "https://github.com/felraine/SpederMath_Repository",
   },
   {
     id: 2,
-    title: "Orbit Analytics Dashboard",
+    title: "Listify",
     description:
-      "Interactive analytics dashboard with data visualization and filtering capabilities.",
-    image: "/projects/project2.png",
-    tags: ["TypeScript", "D3.js", "Next.js"],
+      "Listify is a web-based task management platform designed to help students organize and track their activities, deadlines, and task details efficiently. The system allows users to create tasks, set reminders, add sub-notes, and integrate tasks with a calendar. Notifications are provided to ensure timely completion of tasks. ",
+    image: "/projects/listify.png",
+    tags: ["Reactjs","Vite", "Mysql", "Spring Boot"],
     demoUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/Seanicks/Listify#",
   },
   {
     id: 3,
-    title: "E-commerce Platform",
+    title: "Project Porcie",
     description:
-      "Full-featured e-commerce platform with user authentication and payment processing.",
-    image: "/projects/project3.png",
-    tags: ["React", "Node.js", "Stripe"],
+      "A Java-based puzzle adventure game built in Apache NetBeans where players solve clues, complete puzzles, and choose from three playable characters.",
+    image: "/projects/porcie2.png",
+    tags: ["Apache Netbeans","Java", "Sql",],
     demoUrl: "#",
-    githubUrl: "#",
+    githubUrl: "",
   },
 ];
 
@@ -75,20 +75,29 @@ export const ProjectsSection = () => {
                 </p>
                 <div className="flex justify-between items-center">
                   <div className="flex space-x-3">
-                    <a
-                      href={project.demoUrl}
-                      target="_blank"
-                      className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                    >
-                      <ExternalLink size={20} />
-                    </a>
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                    >
-                      <Github size={20} />
-                    </a>
+                    {(project.id !== 2 && project.id !== 3 && project.demoUrl && project.demoUrl !== '#') && (
+                      <a
+                        href={project.demoUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                        aria-label={`${project.title} demo`}
+                      >
+                        <ExternalLink size={20} />
+                      </a>
+                    )}
+
+                    {project.githubUrl && project.githubUrl !== '#' && (
+                      <a
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                        aria-label={`${project.title} repository`}
+                      >
+                        <Github size={20} />
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>
